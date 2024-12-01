@@ -86,6 +86,8 @@ function drawBackground() {
 }
 
 function draw() {
+  // changer le dernier param (< 100) pour effets de trainée
+  background(0, 0, 0, 100);
   drawBackground();
   if (gameOver) {
     showGameOverPage(); // Afficher la page de fin de jeu
@@ -94,9 +96,6 @@ function draw() {
   if (!gameStarted) {
     showStartScreen(); // Afficher le message de démarrage
   }
-  // changer le dernier param (< 100) pour effets de trainée
-  background(0, 0, 0, 100);
-  
   for (let boid of flock) {
     boid.edges();
     boid.flock(flock);
