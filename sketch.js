@@ -40,7 +40,7 @@ function setup() {
   //vehicules.push(pursuer2);
 
   // On cree un obstacle au milieu de l'écran
-  obstacles.push(new Obstacle(width / 2, height / 2, 100, "green"));
+  obstacles.push(new Obstacle(random(width / 2), random(height / 2), 100, "green"));
 
   // Créer des curseurs pour régler les paramètres
   sliders.push(creerUnSlider('Max Speed', 1, 10, 6, 1, 10, 10, 'maxSpeed'));
@@ -71,25 +71,32 @@ function drawBackground() {
     noStroke();
     ellipse(x, y, starSize, starSize);
   }
-}
-function showStartMessage() {
+}function showStartScreen() {
   background(0); // Fond noir
   fill(255);  // Texte blanc
-  textSize(32);
-  text("PRESS ENTER KEY TO START", width - 450, height / 3);
+  textAlign(CENTER);
+  textSize(50);
+  text("WELCOME TO THE ADAM SERGHINI MINI", width / 2, height / 3);
+  textSize(30);
+  text("Press <ENTER> to Start", width / 2, height / 2);
+  textSize(20);
+  text("How to play :", width / 2, height / 2 + 60);
+  text("Use arrow keys to move\n<a> :to switch control\n <space> to shoot\n <s> mode snack\n<v> add new vehicule\n <w> add new vehicule with arrow state ", width / 2, height / 2 + 100);
+
 }
 
 function draw() {
-  // changer le dernier param (< 100) pour effets de trainée
-  background(0, 0, 0, 100);
   drawBackground();
   if (gameOver) {
     showGameOverPage(); // Afficher la page de fin de jeu
     return; // Arrêter l'exécution du jeu
   }
   if (!gameStarted) {
-    showStartMessage(); // Afficher le message de démarrage
+    showStartScreen(); // Afficher le message de démarrage
   }
+  // changer le dernier param (< 100) pour effets de trainée
+  background(0, 0, 0, 100);
+  
   for (let boid of flock) {
     boid.edges();
     boid.flock(flock);
