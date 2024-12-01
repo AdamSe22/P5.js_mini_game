@@ -76,7 +76,7 @@ function drawBackground() {
   fill(255);  // Texte blanc
   textAlign(CENTER);
   textSize(50);
-  text("WELCOME TO THE ADAM SERGHINI MINI", width / 2, height / 3);
+  text("Welcome To Adam Serghini Mini Game", width / 2, height / 3);
   textSize(30);
   text("Press <ENTER> to Start", width / 2, height / 2);
   textSize(20);
