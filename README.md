@@ -10,6 +10,6 @@
  *   - espace : pour tirer
  *   - s : mode serpent
  *   - v : ajouter un nouveau véhicule
- *   - w : ajouter un nouveau véhicule avec état de flèche
+ *   - w : ajouter un nouveau véhicule avec état de wander 
 
  
