@@ -1,6 +1,6 @@
 #  Mini Game — Jeu d’évitement et de tir (p5.js)
 
-![Mini Game Screenshot](images/game.PNG)
+![Mini Game Screenshot](images/Game.PNG)
 
 ## 🎮 Présentation
 
@@ -97,3 +97,4 @@ Titulaire d’un **Master 2 en Intelligence Artificielle (IA)**.
 ## 📜 Licence
 Ce projet est distribué sous la **licence MIT**.  
 Vous pouvez l’utiliser, le modifier et le partager librement, à condition de conserver la mention d’auteur originale.
+
